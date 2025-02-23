@@ -1,0 +1,14 @@
+{
+  "path": "/doc",
+  "doc": {
+    "hope": "passing",
+    "this": "tests",
+    "works": "check"
+  },
+  "meta": {
+    "createdBy": "a_user",
+    "createdAt": 1697069484761,
+    "lastModifiedBy": "a_user",
+    "lastModifiedAt": 1697069484761
+  }
+}

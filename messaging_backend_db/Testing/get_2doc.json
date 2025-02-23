@@ -1,0 +1,30 @@
+[
+  {
+    "path": "/d",
+    "doc": {
+      "additionalProp1": "string",
+      "additionalProp2": "string",
+      "additionalProp3": "string"
+    },
+    "meta": {
+      "createdBy": "a_user",
+      "createdAt": 1697067768361,
+      "lastModifiedBy": "a_user",
+      "lastModifiedAt": 1697067768361
+    }
+  },
+  {
+    "path": "/doc",
+    "doc": {
+      "additionalProp1": "string",
+      "additionalProp2": "string",
+      "additionalProp3": "string"
+    },
+    "meta": {
+      "createdBy": "a_user",
+      "createdAt": 1697067761445,
+      "lastModifiedBy": "a_user",
+      "lastModifiedAt": 1697067761445
+    }
+  }
+]

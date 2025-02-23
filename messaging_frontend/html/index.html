@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="COMP 318 Messaging System." />
+    <title>COMP 318 M3ssag1n8</title>
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <script src="https://code.iconify.design/iconify-icon/1.0.6/iconify-icon.min.js"></script>
+    <script defer type="module" src="../src/main.ts"></script>
+    <!-- <script defer type="module" type="text/javascript" src="../src/view.ts"></script> -->
+  </head>
+
+  <body>
+    <section
+      id="logout"
+      style="display: flex; align-items: center; justify-content: space-between"
+    >
+      <h3>COMP 318 M3ssag1n8</h3>
+    </section>
+    <main id="main-container"></main>
+  </body>
+</html>
+
+<template
+  id="WorkspaceLayout"
+  display="flex"
+  style="height: auto; max-height: 100%"
+>
+  <style>
+    .flex-item {
+      margin: 10px;
+      padding: 10px;
+      flex: 1, 1, auto;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #eef2f5;
+    }
+
+    .flex-container {
+      display: flex;
+      justify-content: space-between;
+      height: 70vh;
+    }
+
+    .flex-container-workspace {
+      display: flex;
+      justify-content: space-between;
+    }
+    #channels {
+      background-color: lightblue;
+      margin: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #eef2f5;
+      flex: 1 1 0;
+      overflow-y: scroll; /*if there are a lot of channels we would like to be able to scroll*/
+    }
+
+    #workspaces {
+      margin: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #eef2f5;
+      flex: 1 1 0;
+    }
+    #posts {
+      margin: 10px;
+      position: relative;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #eef2f5;
+      flex: 3 1 0;
+      padding-bottom: 5px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    #posts-list {
+      overflow-y: scroll;
+      flex-shrink: 1;
+      max-height: calc(
+        100% - 21vh
+      ); /* Adjusted max-height considering message input container height */
+    }
+    .message-input-container {
+      bottom: 0;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0; /* allows to stretch side to side  */
+      background-color: #fff;
+      max-height: 18vh;
+      min-height: 15vh;
+      padding: 0.5vh;
+      border-radius: 5px;
+      width: calc(100% - 0.6vh);
+    }
+
+    .message-form textarea {
+      width: calc(
+        100% - 120px
+      ); /* Adjust width based on button size and padding */
+      display: inline-block;
+      resize: none;
+      min-height: 5vh; /* heigh of the textform */
+    }
+
+    .message-form button {
+      background-color: #f5f5f5;
+      border: 1px solid #dcdcdc;
+      margin: 0.5vh 0.5vh; /* Margin between buttons annd above and bellow buttons */
+      border-radius: 4px;
+      cursor: pointer; /* Mouse cursor --> hand icon when hovering over the button */
+      transition: background-color 0.3s; /* transition for hover */
+    }
+
+    .dismissButton {
+      background-color: transparent;
+      border: 1px solid red;
+      border-radius: 3px;
+      color: red;
+      cursor: pointer;
+      padding: 0.5vh 1vh;
+      margin-left: 1vh;
+      transition: background-color 0.3s ease;
+    }
+
+    .dismissButton:hover {
+      background-color: red;
+      color: white;
+    }
+
+    .message-form button:hover {
+      background-color: #e8e8e8;
+    }
+
+    .message-form button:active {
+      background-color: #dcdcdc; /*  darker grey when clicked */
+    }
+  </style>
+  <section class="flex-container-workspace">
+    <section id="workspaces" class="workspaces">
+      <form id="CreateWorkspaceForm" display="flex">
+        <input
+          type="text"
+          id="usernameWorkspace"
+          placeholder="Create workspace"
+        />
+      </form>
+      <nav id="workspaces">
+        <!-- Workspace items added here in a nav bar-->
+      </nav>
+    </section>
+  </section>
+  <section class="flex-container">
+    <section id="channels" class="flex-item channels"></section>
+    <section id="posts" class="flex-item posts">
+      <ul id="posts-list">
+        <!-- posts items -->
+      </ul>
+      <section id="message-input-container" class="message-input-container">
+        <form id="new-message-form" class="message-form"></form>
+      </section>
+    </section>
+  </section>
+</template>
+
+<template id="WorkspaceItemTemplate">
+  <style>
+    .workspace-btn {
+      background-color: #ececec;
+      padding: 1vh 1vh;
+      margin-right: 1vh; /* Space between buttons */
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .workspace-small-btn:hover {
+      background-color: #7ad8ae;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .active {
+      background-color: #78029c;
+      color: white; /* White text color */
+    }
+  </style>
+  <button class="workspace-btn" id="wrkspcButton"></button>
+</template>

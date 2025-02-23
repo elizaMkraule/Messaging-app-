@@ -1,0 +1,44 @@
+[
+    {
+      "path": "/aa",
+      "doc": {
+        "additionalProp1": "string",
+        "additionalProp2": "string",
+        "additionalProp3": "string"
+      },
+      "meta": {
+        "createdAt": 1697166572368,
+        "createdBy": "a_user",
+        "lastModifiedAt": 1697166572368,
+        "lastModifiedBy": "a_user"
+      }
+    },
+    {
+      "path": "/ab",
+      "doc": {
+        "additionalProp1": "string",
+        "additionalProp2": "string",
+        "additionalProp3": "string"
+      },
+      "meta": {
+        "createdAt": 1697166572368,
+        "createdBy": "a_user",
+        "lastModifiedAt": 1697166572368,
+        "lastModifiedBy": "a_user"
+      }
+    },
+    {
+      "path": "/bb",
+      "doc": {
+        "additionalProp1": "string",
+        "additionalProp2": "string",
+        "additionalProp3": "string"
+      },
+      "meta": {
+        "createdAt": 1697166572368,
+        "createdBy": "a_user",
+        "lastModifiedAt": 1697166572368,
+        "lastModifiedBy": "a_user"
+      }
+    }
+  ]

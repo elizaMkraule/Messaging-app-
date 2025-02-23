@@ -1,0 +1,16 @@
+[
+  {
+    "path": "/doc",
+    "doc": {
+      "additionalProp1": "string",
+      "additionalProp2": "string",
+      "additionalProp3": "string"
+    },
+    "meta": {
+      "createdBy": "a_user",
+      "createdAt": 1696886658123,
+      "lastModifiedBy": "a_user",
+      "lastModifiedAt": 1696886718182
+    }
+  }
+]

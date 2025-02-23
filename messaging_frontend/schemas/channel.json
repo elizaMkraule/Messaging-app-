@@ -1,0 +1,12 @@
+{
+  "$id": "channel.json",
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "title": "Channel",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}
